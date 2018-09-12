@@ -4,4 +4,7 @@
 
 <script type="text/javascript" src="js/script.js"></script>
 <script type="text/javascript" src="js/nav.js"></script>
-<script type="text/javascript" src="js/nav-scroll.js"></script>
+
+<?php if (pageTitle() == "home" || pageTitle() == ""):?>
+    <script type="text/javascript" src="js/nav-scroll.js"></script>
+<?php endif; ?>

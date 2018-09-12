@@ -45,9 +45,9 @@ function navMenu($sep = ' | ')
  */
 function pageTitle()
 {
-    $page = isset($_GET['page']) ? htmlspecialchars($_GET['page']) : 'Home';
-
-    echo ucwords(str_replace('-', ' ', $page));
+    $page = isset($_GET['page']) ? htmlspecialchars($_GET['page']) : 'home';
+    //echo ucwords(str_replace('-', ' ', $page));
+    return $page;
 }
 
 /**
@@ -58,7 +58,6 @@ function pageTitle()
 function pageContent()
 {
     $page = isset($_GET['page']) ? $_GET['page'] : 'home';
-
     $path = getcwd().'/'.config('content_path').'/'.$page.'.php';
     // include 'content/'.$page.'.php';
     if (file_exists(filter_var($path, FILTER_SANITIZE_URL))) {

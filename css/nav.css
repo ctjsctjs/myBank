@@ -51,8 +51,8 @@
   top:0;
 }
 
-.workato-logo{
-  height:24px;
+.logo{
+  height:36px;
 }
 
 .workato-logo-color{
@@ -62,7 +62,7 @@
 }
 .nav-link-wrapper ul{
   color: white;
-  font-size:16px;
+  font-size: 1em;
   height:100%;
 
   -webkit-box-align:center;
@@ -70,38 +70,38 @@
   flex:1 1 auto;
 }
 
-.nav-link-wrapper ul li{
+.nav-link{
   display:flex;
   height: 100%;
   align-items: center;
   -webkit-box-align:center;
   padding: 0 15px;
-
   transition: 100ms linear;
 }
+
+.nav-button{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  -webkit-box-align:center;
+}
+
 .nav-home .nav-link-wrapper ul{
   color: white;
-  font-size:16px;
+  font-size:1em;
   height:100%;
 
   -webkit-box-align:center;
   display: flex;
   flex:1 1 auto;
-}
-
-.nav-home .nav-link-wrapper ul li{
-  display:flex;
-  height: 100%;
-  align-items: center;
-  -webkit-box-align:center;
-  padding: 0 15px;
-
-  transition: 100ms linear;
 }
 
 .nav-hamburg{
   display:none;
   float:right;
+  height: 100%;
+  align-items: center;
+  -webkit-box-align:center;
 }
 
 .nav-right .nav-hamburg a{
@@ -121,11 +121,11 @@
   color:#afafaf !important;
 }
 
-.nav-home .scrolled-content{
+.white-nav .nav-link-wrapper ul .nav-link a{
   color:#121212 !important;
 }
 
-.nav-home .scrolled-content:hover{
+.white-nav .nav-link-wrapper ul li a:hover{
   color:#afafaf !important;
 }
 
@@ -140,7 +140,7 @@
   padding:56px 0;
 }
 .side-nav ul li{
-  font-size: 14px;
+  font-size: 1em;
 }
 
 .side-nav ul li:hover{
@@ -165,6 +165,7 @@
 
 .nav-right{
   float: right;
+  padding-right:24px;
 }
 
 .nav-left{
@@ -190,8 +191,8 @@
     margin-left: auto;
   }
 
-  .nav-link, .nav-right{
-    display:none !important;
+  .nav-link{
+    display:none;
   }
 }
 
