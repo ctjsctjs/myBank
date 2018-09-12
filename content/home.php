@@ -13,7 +13,7 @@
     <p class="intro-p">
             We've worked with thousands of people to build the bank account modern businesses need - and we are just getting started.
         </p>
-    <a class="button large-btn home-cta " href="">Get Started</a>
+    <a class="button large-btn home-cta " href="register">Get Started</a>
 </section>
 <section class="container-padding intro-section">
     <div class="res-padding">

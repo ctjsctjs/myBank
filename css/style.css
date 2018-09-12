@@ -19,7 +19,7 @@ body {
 }
 
 .res-padding{
-    max-width: 1336px;
+    max-width: 1024px;
     margin: 0 auto;
     width:100%;
     padding:0 36px;
@@ -74,7 +74,7 @@ Home Styles
     background-position: bottom center;  
     background-color:#24126a;
 
-    height:500px;
+    height:400px;
     width:100%;
     position: relative;
     z-index:-1;
@@ -104,14 +104,14 @@ Home Styles
 }
 
 .banner-title{
-    font-size:72px;
+    font-size:4em;
     color:#121212;
     width:100%;
     font-weight:700;
 }
 
 .banner-subtitle{
-    font-size:24px;
+    font-size:2em;
     color:#525252;
     width:100%;
     font-weight:700;
@@ -206,8 +206,22 @@ footer{
 }
 
 /*Responsive Styles*/
+/*Laptop*/
+@media screen and (max-width: 1366px){
+    .res-padding{
+        padding:0 24px;
+    }
+
+    .banner-title{
+        font-size: 3em;
+    }
+
+    .home-banner{
+        height: 360px;
+    }
+}
 /*Tablet*/
-@media screen and (max-width: 1336px){
+@media screen and (max-width: 1024px){
     .res-padding{
         padding:0 24px;
     }

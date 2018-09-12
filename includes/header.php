@@ -15,7 +15,6 @@
 
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="css/reset.css">
-  <link rel="stylesheet" type="text/css" href="css/base.css">
   <link rel="stylesheet" type="text/css" href="css/nav.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
