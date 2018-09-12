@@ -1,0 +1,16 @@
+body{
+  font-family: 'Lato', 'Arial', sans-serif;
+}
+
+.page{
+  right:0;
+  transition: right 160ms ease;
+  position: relative;
+}
+
+.res-padding{
+  max-width: 1024px;
+  margin: 0 auto;
+  padding:0 12px;
+}
+
