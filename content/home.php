@@ -9,17 +9,13 @@
     <div class="banner-bottom"></div>
 </section>
 <section class="home-section res-padding">
-    <h1 class="banner-title">MyBank</h1>
-    <p class="intro-p">
-            We've worked with thousands of people to build the bank account modern businesses need - and we are just getting started.
-        </p>
-    <a class="button large-btn home-cta " href="register">Get Started</a>
+    <h1 class="banner-title"><?php getSettings("name"); ?></h1>
+    <p class="intro-p"><?php getPageContent("bannerExtract"); ?></p>
+    <a class="button large-btn home-cta " href="register"><?php getPageContent("cta"); ?></a>
 </section>
 <section class="container-padding intro-section">
     <div class="res-padding">
-        <h1 class="intro-title">Digital Banking Re-imagined</h1>
-        <p class="intro-p">
-            We've worked with thousands of people to build the bank account modern businesses need - and we are just getting started.
-        </p>
-        </div>
+        <h1 class="intro-title"><?php getPageContent("introTitle"); ?></h1>
+        <p class="intro-p"><?php getPageContent("introExtract"); ?></p>
+    </div>
 </section>

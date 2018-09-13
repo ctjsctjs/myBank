@@ -6,14 +6,14 @@
             </div>
             <div id="register-banner">
                 <p class="register-p">
-                <?php getString("register", "desc"); ?>    
+                    <?php getPageContent("extract"); ?>    
                 </p>        
             </div>   
         </div>
         <div class="col-right">
             <div id="register-module">
                 <span class="register-description">
-                    Manage your money anytime, anywhere.
+                    <?php getPageContent("tagline"); ?>    
                 </span>
                 <form id="register-form" action="protected/registerLogic.php" method="POST">
                     <input class="form" placeholder="First Name" name="test">       

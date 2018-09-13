@@ -123,6 +123,7 @@ Home Styles
     vertical-align:middle;
     bottom:0;
     width:30%;
+    max-width: 500px;
     right:15%;
     transform: translate(0, 50%); 
     -webkit-box-align:center;

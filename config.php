@@ -18,7 +18,6 @@ function config($key = '')
         'content_path' => 'content',
         'pretty_uri' => true,
         'version' => 'v1.0',
-        'copyright' => '© SecureBank 2018'
     ];
 
     return isset($config[$key]) ? $config[$key] : null;
