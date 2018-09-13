@@ -52,7 +52,7 @@
 }
 
 .logo{
-  height:36px;
+  height:28px;
 }
 
 .workato-logo-color{
@@ -60,9 +60,10 @@
   position: absolute;
   z-index:-1;
 }
+
 .nav-link-wrapper ul{
   color: white;
-  font-size: 1em;
+  font-size:1em;
   height:100%;
 
   -webkit-box-align:center;
@@ -118,15 +119,15 @@
 }
 
 .nav-link a:hover{
-  color:#afafaf !important;
+  color:#afafaf;
 }
 
 .white-nav .nav-link-wrapper ul .nav-link a{
-  color:#121212 !important;
+  color:#121212;
 }
 
-.white-nav .nav-link-wrapper ul li a:hover{
-  color:#afafaf !important;
+.white-nav .nav-link-wrapper ul .nav-link a:hover{
+  color:#afafaf;
 }
 
 .side-nav{
@@ -140,7 +141,7 @@
   padding:56px 0;
 }
 .side-nav ul li{
-  font-size: 1em;
+  font-size:1em;
 }
 
 .side-nav ul li:hover{
@@ -194,15 +195,19 @@
   .nav-link{
     display:none;
   }
+
+  .nav-button{
+    display:none;
+  }
 }
 
 @media screen and (min-width: 960px) {
 
-    .side-nav-extend{
-      right:-300px;
-    }
+  .side-nav-extend{
+    right:-300px;
+  }
 
-    .body-extend{
-      right:0px;
-    }
+  .body-extend{
+    right:0px;
+  }
 }

@@ -31,8 +31,7 @@ body {
   
 .button{
     border-radius: 2em;
-    padding: 6px 24px;
-    height: 1.6em;
+    padding: 10px 24px;
     width: max-content;
     background-color:#d3009c;
 
@@ -46,7 +45,6 @@ body {
     cursor: pointer;
     display: inline-block;
 
-    display: flex;
     align-items: center;
     text-align: center;
     -webkit-box-align:center;
@@ -61,7 +59,35 @@ body {
 }
 
 .large-btn{
-    font-size:24px;
+    font-size:1em;
+}
+
+.form{
+    width: calc(100% - 32px);
+    height: 1em;
+    border-radius: 2px;
+    left:0;
+    right:0;
+    margin: 0 auto;
+    padding: 16px;
+    border: 1px solid #eee;
+    font-size:0.8em;
+  }
+  
+  .form:focus{
+  }
+
+h1{
+    font-size:3em;
+    color:#121212;
+    font-weight:700;
+}
+
+p{
+    font-size:1.4em;
+    color:#525252;
+    font-weight:500;
+    line-height: 1.4em;
 }
 
 /*
@@ -73,7 +99,10 @@ Home Styles
     background-repeat: no-repeat;
     background-position: bottom center;  
     background-color:#24126a;
-
+    font-size:2em;
+    color:#525252;
+    width:100%;
+    font-weight:700;
     height:400px;
     width:100%;
     position: relative;
@@ -190,8 +219,64 @@ Home Styles
     width:100%;
 }
 
-/*Home Styles*/
+/*Register Styles*/
+.register-section{
+    background-color:#24126a;
+}
 
+.flex-cont{
+    display:flex;
+    align-content: center;
+}
+
+.col-left{
+    flex: 1;
+}
+
+.col-right{
+    flex: 1;
+}
+
+.register-p{
+    color:#b9b7ff;
+    font-size:1.2em;
+    line-height: 1.6em;
+    margin-top:18px;
+}
+
+#register-module{
+    background-color:white;
+    border-radius:4px;
+    padding: 64px;
+}
+
+#register-banner{
+    padding:0 32px;
+    margin-right:32px;
+    border-right: 1px solid #b9b7ff;
+}
+
+#register-form > input {
+    margin-bottom:12px;
+}
+
+#register-img {
+    width:100%;
+}
+
+#register-submit{
+    margin-top:12px;
+    width:100%;
+    text-align: center;
+}
+
+.register-description{
+    font-size:1.6em;
+    color:#525252;
+    text-align: center;
+    widows: 100%;
+    margin-bottom:24px;
+}
 
 /*Footer Styles*/
 footer{
