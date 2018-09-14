@@ -1,7 +1,3 @@
 <?php
-
-require 'config.php';
-require 'functions.php';
-require 'strings.php';
-
+require_once 'resources/config.php';
 run();

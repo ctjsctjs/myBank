@@ -9,13 +9,24 @@
     <div class="banner-bottom"></div>
 </section>
 <section class="home-section res-padding">
-    <h1 class="banner-title"><?php getSettings("name"); ?></h1>
-    <p class="intro-p"><?php getPageContent("bannerExtract"); ?></p>
-    <a class="button large-btn home-cta " href="register"><?php getPageContent("cta"); ?></a>
+    <h1 class="banner-title">
+        <?php echo APP_NAME ?>    
+        <?php echo getSessionUsername() ?>    
+    </h1>
+    <p class="intro-p">
+        <?php echo HOME_BANNER_EXTRACT ?>    
+    </p>
+    <a class="button large-btn home-cta " href="register">
+        <?php echo HOME_BANNER_CTA ?>    
+    </a>
 </section>
 <section class="container-padding intro-section">
     <div class="res-padding">
-        <h1 class="intro-title"><?php getPageContent("introTitle"); ?></h1>
-        <p class="intro-p"><?php getPageContent("introExtract"); ?></p>
+        <h1 class="intro-title">
+            <?php echo HOME_SECTION1_TITLE ?>    
+        </h1>
+        <p class="intro-p">
+            <?php echo HOME_BANNER_EXTRACT ?>    
+        </p>
     </div>
 </section>

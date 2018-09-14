@@ -1,6 +1,7 @@
 <footer>
     <div class="res-padding">
-        <span class="footer-info"><?php getSettings("copyright"); ?></span>
+        <span class="footer-info">
+            <?php echo APP_COPYRIGHT ?>    
+        </span>
     </div>
 </footer>
-<?php include_once 'includes/scripts.php' ?>

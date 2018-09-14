@@ -1,7 +1,7 @@
 <?php if (pageTitle() == "home" || pageTitle() == ""):?>
-    <nav class="nav-bar nav-home">
+<nav class="nav-bar nav-home">
 <?php else: ?>
-    <nav class="nav-bar white-nav">
+<nav class="nav-bar white-nav">
 <?php endif; ?>
     <div class="nav-bg"></div>
     <div class="nav-link-wrapper res-padding">

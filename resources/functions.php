@@ -49,28 +49,3 @@ function pageTitle()
     //echo ucwords(str_replace('-', ' ', $page));
     return $page;
 }
-
-/**
- * Displays page content. It takes the data from 
- * the static pages inside the pages/ directory.
- * When not found, display the 404 error page.
- */
-function pageContent()
-{
-    $page = isset($_GET['page']) ? $_GET['page'] : 'home';
-    $path = getcwd().'/'.config('content_path').'/'.$page.'.php';
-    
-    if (file_exists(filter_var($path, FILTER_SANITIZE_URL))) {
-        include $path;
-    } else {
-        include config('content_path').'/404.php';
-    }
-}
-
-/**
- * Starts everything and displays the template.
- */
-function run()
-{
-    include config('template_path').'/template.php';
-}
