@@ -8,12 +8,7 @@
 function config($key = '')
 {
     $config = [
-        'name' => 'MyBank',
-        'nav_menu' => [
-            '' => 'home',
-            'register' => 'register',
-            'login' => 'login'
-        ],
+        'name' => 'MyBank',       
         'db' => [
             'user' => 'host',
             'password' => '',
@@ -32,12 +27,12 @@ function config($key = '')
  */
 function run()
 {
-    require_once 'protected/class.Session.php';
+    require_once getPath('class_path').'/class.Session.php';
 
-    require_once 'resources/session.php';
-    require_once 'resources/strings.php';
-    require_once 'resources/functions.php';
-    require_once 'resources/route.php';
+    require_once getPath('resources_path').'/session.php';
+    require_once getPath('resources_path').'/strings.php';
+    require_once getPath('resources_path').'/icons.php';
+    require_once getPath('resources_path').'/functions.php';
 
     include_once getPath('template_path').'/template.php';
 }

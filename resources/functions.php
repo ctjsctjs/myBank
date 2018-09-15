@@ -27,15 +27,20 @@ function siteCopyright()
 /**
  * Website navigation.
  */
-function navMenu($sep = ' | ')
+function getNavMenu()
 {
-    $nav_menu = '';
-
-    foreach (config('nav_menu') as $uri => $name) {
-        $nav_menu .= '<a href="/'.(config('pretty_uri') || $uri == '' ? '' : '?page=').$uri.'">'.$name.'</a>'.$sep;
+    foreach (getNavConfig() as $name => $uri) {
+        //$nav_menu .= '<a href="/'.(config('pretty_uri') || $uri == '' ? '' : '?page=').$uri.'">'.$name.'</a>'.$sep;
+        echo '<li class="nav-link"><a href="'.$uri.'">'.$name.'</a></li>' ;
     }
+}
 
-    echo trim($nav_menu, $sep);
+function getSideMenu()
+{
+    foreach (getNavConfig() as $name => $uri) {
+        //$nav_menu .= '<a href="/'.(config('pretty_uri') || $uri == '' ? '' : '?page=').$uri.'">'.$name.'</a>'.$sep;
+        echo '<li><a href="'.$uri.'">'.$name.'</a></li>' ;
+    }
 }
 
 /**

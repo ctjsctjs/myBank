@@ -5,6 +5,7 @@
   z-index: 10;
   height:58px;
   z-index: 15;
+  transition: 160ms ease;
 }
 
 .nav-link-wrapper{
@@ -13,7 +14,7 @@
 
 .nav-bg{
   position: absolute;
-  background-color: white;
+  background-color: #150e33;
   top:0px;
   width: 100%;
   height:100%;
@@ -31,22 +32,18 @@
 
 .nav-home .nav-bg{
   position: absolute;
-  background-color: white;
-  top:6px;
+  background-color: transparent;
+  top:-58px;
   width: 100%;
   height:100%;
   z-index: -5;
+  box-shadow: none;
 
   transition: 100ms linear;
 }
 
-.nav-home .nav-bg{
-  background-color: transparent;
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.0);
-}
-
 .nav-home .scrolled-bg{
-  background-color: white;
+  background-color: #150e33;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
   top:0;
 }
@@ -71,7 +68,7 @@
   flex:1 1 auto;
 }
 
-.nav-link{
+.nav-link, .logo-wrapper{
   display:flex;
   height: 100%;
   align-items: center;
@@ -114,43 +111,38 @@
 }
 
 .nav-link a{
-  color:#efefef;
+  color:#dfdfdf;
+  font-size:1em;
+  font-weight:700;
   transition: 160ms linear;
 }
 
 .nav-link a:hover{
-  color:#afafaf;
-}
-
-.white-nav .nav-link-wrapper ul .nav-link a{
-  color:#121212;
-}
-
-.white-nav .nav-link-wrapper ul .nav-link a:hover{
-  color:#afafaf;
+  color:white;
 }
 
 .side-nav{
   z-index: 15;
   position: fixed;
   right:-300px;
-  background-color: #212c3d;
+  background-color: #150e33;
   height:100%;
   width: 300px;
   transition: 160ms ease;
   padding:56px 0;
 }
+
 .side-nav ul li{
   font-size:1em;
 }
 
 .side-nav ul li:hover{
-  background-color: #27989f;
+  background-color: #d3009c;
   transition: 160ms ease;
 }
 
 .side-nav ul li a{
-  color:#efefef;
+  color:#fafafa;
   height: 100%;
   width: 100%;
   padding:24px;
@@ -178,7 +170,7 @@
 }
 
 .body-extend{
-  right:300px;
+  right:300px !important;
 }
 
 .no-scroll{

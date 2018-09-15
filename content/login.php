@@ -14,11 +14,20 @@
                 <span class="register-description">
                     <?php echo LOGIN_TITLE ?>    
                 </span>
-                <form id="register-form" action="protected/loginLogic.php" method="POST">
-                    <input class="form" placeholder="Email" name="email">
-                    <input class="form" placeholder="Password" name="password">
+                <span class="register-reminder">
+                    <?php echo LOGIN_REMINDER ?>
+                    <a href="login"><?php echo LOGIN_REMINDER_CTA ?></a>
+                </span>   
+                <form class="form" id="register-form" action="<?php getProtectedPath('/loginValidation.php')?>" method="POST">
+                    <input placeholder="Email" name="email" value="<?php echo getSessionData('login_email_value') ?>">
+                    <span class="form-error"><?php echo getSessionData('login_email_error') ?></span>
+                    <input placeholder="Password" name="password" type="password">
+                    <span class="form-error"><?php echo getSessionData('login_pw_error') ?></span>
                     <button id="register-submit" class="button large-btn" href="register" type="submit" >Login</button>
                 </form>
+                <span class="login-forgetpw">
+                    <a href="login"><?php echo LOGIN_FORGETPW_CTA.ICON_QUESTION ?></a>
+                </span>   
             </div>
         </div>
     </div>
