@@ -13,8 +13,10 @@ const ROLE_MANAGER = "manager";
 //Error strings
 const FIELD_BLANK = "This field can't be empty";
 const FIELD_EMAIL = "The email is invalid";
+const INVALID_NAME = "Please ensure that only valid characters";
 const INVALID_EMAIL = "Please enter a valid email.";
 const INVALID_PW = "Please enter your password.";
+const SHORT_PW = "Your password has to be at least 8 characters";
 
 //Home page
 const HOME_BANNER_TITLE = "Simple & Secure";
@@ -27,6 +29,7 @@ const REGISTER_TITLE = "Manage your money anytime, anywhere.";
 const REGISTER_EXTRACT = "MyBank in Singapore is part of an international banking group, with more than 150 years of history in some of the world's most dynamic markets. Our purpose is to drive commerce and prosperity through our unique diversity, and our heritage and values are expressed in our brand promise, Here for good.";              
 const REGISTER_REMINDER= "Already have an account?";              
 const REGISTER_REMINDER_CTA= "Login here.";              
+const REGISTER_SUCCESS="Your registration has been a success. A manager will now approve your registion. We will send you an email to reset your password.";
 
 //Login page
 const LOGIN_TITLE = "Welcome back!";

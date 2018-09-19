@@ -15,14 +15,25 @@
                     <a href="login"><?php echo REGISTER_REMINDER_CTA ?></a>
                 </span>   
                 <form class="form" id="register-form" action="<?php getProtectedPath('/registerValidation.php')?>" method="POST">
-                    <input placeholder="First Name">       
-                    <input placeholder="Last Name">
-                    <input placeholder="Email">
-                    <input placeholder="Password" type="password">
-                    <input placeholder="Confirm Password" type="password">
+                    <input placeholder="Name" name="name" value="<?php echo getSessionData('register_name_value') ?>"> 
+                    <span class="form-error"><?php echo getSessionData('register_name_error') ?></span>
+      
+                    <input placeholder="Email" name="email" value="<?php echo getSessionData('register_email_value') ?>">
+                    <span class="form-error"><?php echo getSessionData('register_email_error') ?></span>
+
+                    <input placeholder="Mobile Number" name="mobileNo" type="number" value="<?php echo getSessionData('register_mobileNo_value') ?>">
+                    <span class="form-error"><?php echo getSessionData('register_mobileNo_error') ?></span>
+
+                    <input placeholder="Address" name="address" value="<?php echo getSessionData('register_address_value') ?>">
+                    <span class="form-error"><?php echo getSessionData('register_address_error') ?></span>
+
+                    <input placeholder="Annual income" name="income" type="number" value="<?php echo getSessionData('register_income_value') ?>">
+                    <span class="form-error"><?php echo getSessionData('register_income_error') ?></span>
+
                     <button id="register-submit" class="button large-btn" href="register" type="submit" >Register</button>
                 </form>
             </div>
         </div>
     </div>
 </section>
+<?php include_once 'includes/introSection.php' ?>

@@ -361,6 +361,10 @@ Home Styles
     display:block;
 }
 
+.notfound-padding{
+    padding:24px 0 48px;
+}
+
 /*Footer Styles*/
 footer{
     background-color: #fafafa;

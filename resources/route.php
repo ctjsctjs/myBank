@@ -1,10 +1,12 @@
 <?php
+
 /**
-*
+* Returns path of directory
 */
+
 function getPath($key){
     $path = [
-        'template_path' => 'resources/template',
+        'template_path' => 'resources/template', 
         'resources_path' => 'resources',
         'class_path' => 'resources/class',
         'protected_path' => 'protected',
@@ -13,10 +15,15 @@ function getPath($key){
     return $path[$key];
 }
 
+/**
+* Returns navigation list of navigation configs
+* Key is navigation label
+* Value is navigation link
+*/
+
 function getNavConfig(){
     $path = [
         'Banking' => 'banking',
-        'Products' => 'products',
         'About Us' => 'aboutUs'
     ];
     return $path;
@@ -59,13 +66,15 @@ function getPageContent()
             $content = $page;
     }
 
+    //String path together
     $path = getPath('content_path').'/'.$content.'.php';
 
-    //If content page does not exist
+    //If static page does not exist, display 404 page
     if (!file_exists(filter_var($path, FILTER_SANITIZE_URL))) {
         $path = getPath('content_path').'/404.php';
     }
 
+    //Display page
     include_once $path;
     clearSessionData();
 }

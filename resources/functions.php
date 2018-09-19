@@ -1,29 +1,4 @@
 <?php
-
-/**
- * Displays site name.
- */
-function siteName()
-{
-    echo config('name');
-}
-
-/**
- * Displays site version.
- */
-function siteVersion()
-{
-    echo config('version');
-}
-
-/**
- * Displays site copyright information.
- */
-function siteCopyright()
-{
-    echo config('copyright');
-}
-
 /**
  * Website navigation.
  */

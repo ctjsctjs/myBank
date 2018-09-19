@@ -1,12 +1,12 @@
 <head>
-  <title><?php siteName()?></title>
+  <title><?php echo APP_NAME?></title>
 
   <!-- Metadata -->
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <meta name="description" content="<?php siteName()?>" />
-  <meta name="keywords" content="<?php siteName()?>" />
+  <meta name="description" content="<?php echo APP_NAME?>" />
+  <meta name="keywords" content="<?php echo APP_NAME?>" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" type="image/png" href="images/fav-logo.png"/>
+  <link rel="shortcut icon" type="image/ico" href="images/logo.ico" />
 
   <!-- CDN -->
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,900" rel="stylesheet">

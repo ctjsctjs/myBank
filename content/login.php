@@ -16,13 +16,13 @@
                 </span>
                 <span class="register-reminder">
                     <?php echo LOGIN_REMINDER ?>
-                    <a href="login"><?php echo LOGIN_REMINDER_CTA ?></a>
+                    <a href="register"><?php echo LOGIN_REMINDER_CTA ?></a>
                 </span>   
-                <form class="form" id="register-form" action="<?php getProtectedPath('/loginValidation.php')?>" method="POST">
+                <form class="form" id="register-form" action="<?php getProtectedPath('/loginValidation.php')?>" method="POST">                 
                     <input placeholder="Email" name="email" value="<?php echo getSessionData('login_email_value') ?>">
                     <span class="form-error"><?php echo getSessionData('login_email_error') ?></span>
                     <input placeholder="Password" name="password" type="password">
-                    <span class="form-error"><?php echo getSessionData('login_pw_error') ?></span>
+                    <span class="form-error"><?php echo getSessionData('login_pw_error') ?></span>   
                     <button id="register-submit" class="button large-btn" href="register" type="submit" >Login</button>
                 </form>
                 <span class="login-forgetpw">
@@ -32,3 +32,4 @@
         </div>
     </div>
 </section>
+<?php include_once 'includes/introSection.php' ?>
