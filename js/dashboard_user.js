@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-    updateBalance(5600);
+    updateBalance(0);
 });
 
 //Update balance value

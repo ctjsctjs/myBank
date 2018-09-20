@@ -48,6 +48,29 @@
   top:0;
 }
 
+.nav-welcome-label{
+  display:block;
+  width:100%;
+  font-size:0.8em;
+}
+
+.nav-link-stack div{
+  border-right: 1px solid white;
+  padding-right:24px;
+}
+
+.nav-welcome-label{
+  font-size:0.6em;
+}
+
+.nav-welcome-name{
+  display:block;
+  width:100%;
+  font-size:0.8em;
+  margin-top:4px;
+  font-weight:700;
+}
+
 .logo{
   height:28px;
 }

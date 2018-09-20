@@ -7,6 +7,12 @@
         </ul>
         <ul class="nav-right">
             <?php if (loggedIn()): ?>
+            <li class="nav-link-stack nav-link">
+                <div class="">
+                    <span class="nav-welcome-label">Welcome,</span>
+                    <span class="nav-welcome-name"><?php echo getSessionData('name')?></span>
+                </div>
+            </li>
             <li class="nav-link"><a href="<?php getProtectedPath('/logout.php')?>">Logout</a></li>
             <?php else: ?>
             <li class="nav-link"><a href="login">Login</a></li>

@@ -22,10 +22,27 @@ function getPath($key){
 */
 
 function getNavConfig(){
-    $path = [
-        'Banking' => 'banking',
-        'About Us' => 'aboutUs'
-    ];
+    if (loggedIn()){
+        switch (getSessionData('role')) {
+            case 'user':
+                $path = [
+                    'Transactions' => 'transactions',
+                    'Transfers' => 'transfer'
+                ];
+                break;
+            case 'admin':
+                break;
+            case 'manager':
+                break;
+            default:
+        }
+    } else {
+        $path = [
+            'Banking' => 'banking',
+            'About Us' => 'aboutUs'
+        ];
+    }
+   
     return $path;
 }
 

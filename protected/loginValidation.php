@@ -53,7 +53,7 @@
 
          //Dummy data
          $userDataRows = 1;
-         $userData['name']='Clement';
+         $userData['name']='Clement Toh';
          $userData['roles']='user';
 
         //Check if username exists in DB
