@@ -325,7 +325,41 @@ Home Styles
     color:#525252;
 }
 
+/*User Styles*/
+.user-toolbar{
+    padding:36px;
+    background-color:white;
+}
 
+.toolbar-welcome{
+    display:inline-block;
+    font-size:1em;
+    flex: 1;
+
+}
+
+.toolbar-balance{
+    flex: 1;
+}
+
+.toolbar-balance > span{
+}
+
+#label-balance{
+    font-size:0.8em;
+    text-align: right;
+}
+
+#value-balance{
+    margin-top:12px;
+    text-align: right;
+    font-size:2em;
+    font-weight: 700;
+}
+
+#value-balance:before{
+    content: '$';
+}
 /*Dashboard Styles*/
 .dashboard-section{
     background-color:#fafafa;

@@ -5,6 +5,26 @@
 <script type="text/javascript" src="js/script.js"></script>
 <script type="text/javascript" src="js/nav.js"></script>
 
-<?php if (pageTitle() == "home" || pageTitle() == ""):?>
-    <script type="text/javascript" src="js/nav-scroll.js"></script>
-<?php endif; ?>
+<?php 
+
+    //Add scripts based on page title
+    switch (pageTitle()) {
+        case 'home':
+        case '':
+            echo '<script type="text/javascript" src="js/nav-scroll.js"></script>';
+            break; 
+        case 'dashboard':
+            $role = getSessionData('role');
+            echo '<script type="text/javascript" src="js/dashboard_'.$role.'.js"></script>';
+            break;
+        default:
+    }
+
+    //Add scripts based on user log in role
+    switch ($role = getSessionData('role')){
+        case 'user':
+            echo '<script type="text/javascript" src="js/dashboard_'.$role.'.js"></script>';
+            break;
+        default:
+    }
+?>

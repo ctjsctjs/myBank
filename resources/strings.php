@@ -11,12 +11,14 @@ const ROLE_ADMIN = "admin";
 const ROLE_MANAGER = "manager";
 
 //Error strings
-const FIELD_BLANK = "This field can't be empty";
-const FIELD_EMAIL = "The email is invalid";
-const INVALID_NAME = "Please ensure that only valid characters";
-const INVALID_EMAIL = "Please enter a valid email.";
-const INVALID_PW = "Please enter your password.";
-const SHORT_PW = "Your password has to be at least 8 characters";
+const ERR_FIELD_BLANK = "This field can't be empty";
+const ERR_FIELD_EMAIL = "The email is invalid";
+const ERR_INVALID_NAME = "Please ensure that only valid characters";
+const ERR_INVALID_EMAIL = "Please enter a valid email.";
+const ERR_INVALID_PW = "Please enter your password.";
+const ERR_SHORT_PW = "Your password has to be at least 8 characters";
+const ERR_NOT_REGISTERED = "The account does not exist.";
+const ERR_WRONG_PW = "The password you have entered is incorrect.";
 
 //Home page
 const HOME_BANNER_TITLE = "Simple & Secure";
