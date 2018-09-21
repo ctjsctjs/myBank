@@ -6,19 +6,19 @@
 
     //$conn = connectDB();
     $session = new Session();
-    $email = $_POST['email'];
+    $nric = $_POST['nric'];
     $password = $_POST['password'];
     $valid = true;
 
-    //check if email is valid
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $session->set('login_email_error', ICON_ERROR.ERR_INVALID_EMAIL);
+    //Check if nric is correct format
+    if(preg_match('/[(?i)^[STFG]d{7}[A-Z]$]/', $nric)){
+        $session->set('login_nric_error', ICON_ERROR.ERR_INVALID_NRIC);
         $valid = false;
     }
 
     //check if email field is blank
-    if($email==null){
-        $session->set('login_email_error', ICON_ERROR.ERR_FIELD_BLANK);
+    if($nric==null){
+        $session->set('login_nric_error', ICON_ERROR.ERR_FIELD_BLANK);
         $valid = false;
     }
 
@@ -71,18 +71,18 @@
         //If username and password is valid, set session
         if($valid){
             $session->set('name', $userData['name']);  
-            $session->set('username', $email);  
+            $session->set('username', $nric);  
             $session->set('role', $userData['roles']); 
             header("Location: ../dashboard");
 
         } else {
             
-            $session->set('login_email_value', $email);
+            $session->set('login_nric_value', $nric);
             header("Location: ../login");
 
         }        
     } else {
-        $session->set('login_email_value', $email);
+        $session->set('login_nric_value', $nric);
         header("Location: ../login");
     }
 ?>

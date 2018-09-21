@@ -6,37 +6,16 @@
         </div>
     </div>
 </div>
-<section class="container-padding dashboard-section">
+<section class="dashboard-padding dashboard-section">
     <div class="res-padding flex-cont">
-            <ul class="transaction-ul">
-                <li>
-                    <ul>
-                        <li>Transaction ID</li>
-                        <li>Sender</li>
-                        <li>Receiver</li>
-                        <li>Date</li>
-                        <li>Amount</li>
-                    </ul>
-                </li>
-                <li>
-                    <ul>
-                        <li>123878D</li>
-                        <li>John Tan</li>
-                        <li>Samantha Toh</li>
-                        <li>17 Aug 2018</li>
-                        <li>$5,021</li>
-                    </ul>
-                </li>
-                <li>
-                    <ul>
-                        <li>123878D</li>
-                        <li>John Tan</li>
-                        <li>Samantha Toh</li>
-                        <li>17 Aug 2018</li>
-                        <li>$5,021</li>
-                    </ul>
-                </li>
-            </ul>
-        
+        <div class="dashboard-left">
+            <a class="button large-btn home-cta" id="btn-deposit">
+                Deposit funds  
+            </a>        
+        </div>
+        <div class="dashboard-right">
+            <ul class="transaction-ul" id="transaction-ul"></ul>
+        </div>        
     </div>
 </section>
+<?php include_once 'includes/modal.php' ?>

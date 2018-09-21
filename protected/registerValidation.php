@@ -4,6 +4,7 @@
     require_once '../resources/icons.php';
 
     $session = new Session();
+    $nric = $_POST['nric'];
     $name = $_POST['name'];
     $email = $_POST['email'];
     $mobileNo = $_POST['mobileNo'];
@@ -11,9 +12,27 @@
     $income = $_POST['income'];
     $valid = true;
 
+    //Check if nric consists of only valid characters
+    if(preg_match('/[^A-Za-z0-9.#\s\-$]/', $nric)){
+        $session->set('register_nric_error', ICON_ERROR.ERR_INVALID_CHAR);
+        $valid = false;
+    }
+
+    //Check if nric is correct format
+    if(preg_match('/[(?i)^[STFG]d{7}[A-Z]$]/', $nric)){
+        $session->set('register_nric_error', ICON_ERROR.ERR_INVALID_NRIC);
+        $valid = false;
+    }
+
+    //Check if name is empty
+    if($nric==null){
+        $session->set('register_nric_error', ICON_ERROR.ERR_FIELD_BLANK);
+        $valid = false;
+    }
+
     //Check if name consists of only valid characters
     if(preg_match('/[^A-Za-z0-9.#\s\-$]/', $name)){
-        $session->set('register_name_error', ICON_ERROR.ERR_INVALID_NAME);
+        $session->set('register_name_error', ICON_ERROR.ERR_INVALID_CHAR);
         $valid = false;
     }
 
@@ -62,6 +81,7 @@
         
         header("Location: ../success");
     } else {
+        $session->set('register_nric_value', $nric);
         $session->set('register_name_value', $name);
         $session->set('register_email_value', $email);
         $session->set('register_mobileNo_value', $mobileNo);

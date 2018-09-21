@@ -19,8 +19,8 @@
                     <a href="register"><?php echo LOGIN_REMINDER_CTA ?></a>
                 </span>   
                 <form class="form" id="register-form" action="<?php getProtectedPath('/loginValidation.php')?>" method="POST">                 
-                    <input placeholder="Email" name="email" value="<?php echo getSessionData('login_email_value') ?>">
-                    <span class="form-error"><?php echo getSessionData('login_email_error') ?></span>
+                    <input placeholder="NRIC Number" name="nric" value="<?php echo getSessionData('login_nric_value') ?>">
+                    <span class="form-error"><?php echo getSessionData('login_nric_error') ?></span>
                     <input placeholder="Password" name="password" type="password">
                     <span class="form-error"><?php echo getSessionData('login_pw_error') ?></span>   
                     <button id="register-submit" class="button large-btn" href="register" type="submit" >Login</button>

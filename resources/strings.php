@@ -13,9 +13,10 @@ const ROLE_MANAGER = "manager";
 //Error strings
 const ERR_FIELD_BLANK = "This field can't be empty";
 const ERR_FIELD_EMAIL = "The email is invalid";
-const ERR_INVALID_NAME = "Please ensure that only valid characters";
+const ERR_INVALID_CHAR = "Please ensure that only valid characters";
 const ERR_INVALID_EMAIL = "Please enter a valid email.";
 const ERR_INVALID_PW = "Please enter your password.";
+const ERR_INVALID_NRIC = "Please enter a valid NRIC.";
 const ERR_SHORT_PW = "Your password has to be at least 8 characters";
 const ERR_NOT_REGISTERED = "The account does not exist.";
 const ERR_WRONG_PW = "The password you have entered is incorrect.";

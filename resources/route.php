@@ -22,27 +22,30 @@ function getPath($key){
 */
 
 function getNavConfig(){
-    if (loggedIn()){
-        switch (getSessionData('role')) {
-            case 'user':
-                $path = [
-                    'Transactions' => 'transactions',
-                    'Transfers' => 'transfer'
-                ];
-                break;
-            case 'admin':
-                break;
-            case 'manager':
-                break;
-            default:
-        }
-    } else {
-        $path = [
-            'Banking' => 'banking',
-            'About Us' => 'aboutUs'
-        ];
-    }
-   
+    // if (loggedIn()){
+    //     switch (getSessionData('role')) {
+    //         case 'user':
+    //             $path = [
+    //                 'Transactions' => 'transactions',
+    //                 'Transfers' => 'transfer'
+    //             ];
+    //             break;
+    //         case 'admin':
+    //             break;
+    //         case 'manager':
+    //             break;
+    //         default:
+    //     }
+    // } else {
+    //     $path = [
+    //         'Banking' => 'banking',
+    //         'About Us' => 'aboutUs'
+    //     ];
+    // }
+    $path = [
+        'Banking' => 'banking',
+        'About Us' => 'aboutUs'
+    ];
     return $path;
 }
 
@@ -59,12 +62,14 @@ function getProtectedPath($path){
 function getPageContent()
 {
     $page = isset($_GET['page']) ? $_GET['page'] : 'home'; //Get user path
-    
+    $script;
+
     switch ($page) {
         case 'home':
             if (loggedIn()){
                 $role = getSessionData('role');
                 $content = 'dashboard_'.$role;
+                $script = 'dashboard_'.$role;
             } else {
                 $content = 'home';
             }
@@ -72,6 +77,7 @@ function getPageContent()
         case 'dashboard':
             $role = getSessionData('role');
             $content = 'dashboard_'.$role;
+            $script = 'dashboard_'.$role;
             break;
         case 'login':
             $content = 'login';
@@ -91,7 +97,14 @@ function getPageContent()
         $path = getPath('content_path').'/404.php';
     }
 
+
     //Display page
     include_once $path;
+
+    //echo script if it is set
+    if (isset($script)){
+        $pageScript='<script type="text/javascript" src="js/'.$script.'.js"></script>';
+        echo $pageScript;
+    }
     clearSessionData();
 }

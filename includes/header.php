@@ -16,5 +16,8 @@
   <link rel="stylesheet" type="text/css" href="css/reset.css">
   <link rel="stylesheet" type="text/css" href="css/nav.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/modal.css">
+
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 </head>
 

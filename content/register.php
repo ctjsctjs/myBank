@@ -15,6 +15,9 @@
                     <a href="login"><?php echo REGISTER_REMINDER_CTA ?></a>
                 </span>   
                 <form class="form" id="register-form" action="<?php getProtectedPath('/registerValidation.php')?>" method="POST">
+                    <input placeholder="NRIC Number" name="nric" value="<?php echo getSessionData('register_nric_value') ?>"> 
+                    <span class="form-error"><?php echo getSessionData('register_nric_error') ?></span>
+
                     <input placeholder="Name" name="name" value="<?php echo getSessionData('register_name_value') ?>"> 
                     <span class="form-error"><?php echo getSessionData('register_name_error') ?></span>
       
