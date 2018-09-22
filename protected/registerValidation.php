@@ -13,16 +13,16 @@
     $valid = true;
 
     //Check if nric consists of only valid characters
-    if(preg_match('/[^A-Za-z0-9.#\s\-$]/', $nric)){
-        $session->set('register_nric_error', ICON_ERROR.ERR_INVALID_CHAR);
-        $valid = false;
-    }
-
-    //Check if nric is correct format
-    if(preg_match('/[(?i)^[STFG]d{7}[A-Z]$]/', $nric)){
+    if(!preg_match('^[SFTG]\d{7}[A-Z]$', $nric)){
         $session->set('register_nric_error', ICON_ERROR.ERR_INVALID_NRIC);
         $valid = false;
     }
+
+    // //Check if nric is correct format
+    // if(preg_match('/[(?i)^[STFG]d{7}[A-Z]$]/', $nric)){
+    //     $session->set('register_nric_error', ICON_ERROR.ERR_INVALID_NRIC);
+    //     $valid = false;
+    // }
 
     //Check if name is empty
     if($nric==null){
@@ -31,7 +31,7 @@
     }
 
     //Check if name consists of only valid characters
-    if(preg_match('/[^A-Za-z0-9.#\s\-$]/', $name)){
+    if(!preg_match('/^[a-zA-Z ]*$/', $name)){
         $session->set('register_name_error', ICON_ERROR.ERR_INVALID_CHAR);
         $valid = false;
     }

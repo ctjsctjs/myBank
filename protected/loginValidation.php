@@ -11,7 +11,7 @@
     $valid = true;
 
     //Check if nric is correct format
-    if(preg_match('/[(?i)^[STFG]d{7}[A-Z]$]/', $nric)){
+    if(preg_match('/^[0-9]{6}-[0-9]{2}-[0-9]{4}$/', $nric)){
         $session->set('login_nric_error', ICON_ERROR.ERR_INVALID_NRIC);
         $valid = false;
     }
