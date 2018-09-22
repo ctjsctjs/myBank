@@ -12,17 +12,23 @@
     $income = $_POST['income'];
     $valid = true;
 
-    //Check if nric consists of only valid characters
-    if(!preg_match('^[SFTG]\d{7}[A-Z]$', $nric)){
-        $session->set('register_nric_error', ICON_ERROR.ERR_INVALID_NRIC);
-        $valid = false;
-    }
+    // //Check if nric consists of only valid characters
+    // if(!preg_match('^[SFTG]\d{7}[A-Z]$', $nric)){
+    //     $session->set('register_nric_error', ICON_ERROR.ERR_INVALID_NRIC);
+    //     $valid = false;
+    // }
 
     // //Check if nric is correct format
     // if(preg_match('/[(?i)^[STFG]d{7}[A-Z]$]/', $nric)){
     //     $session->set('register_nric_error', ICON_ERROR.ERR_INVALID_NRIC);
     //     $valid = false;
     // }
+
+    //Check if NRIC is in correct format
+    if(!preg_match('((?i)^[STFG]\d{7}[A-Z]$)', $nric)){
+        $session->set('register_nric_error', ICON_ERROR.ERR_INVALID_NRIC);
+        $valid = false;
+    }
 
     //Check if name is empty
     if($nric==null){
